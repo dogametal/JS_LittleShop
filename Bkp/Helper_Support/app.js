@@ -64,16 +64,15 @@ class ProductItem {
 class ProductList {
   products = [
     new Product(
-      'A Book',
-      //Get picture from Cloud AWS - S3 by Douglas
-      'https://douglasjpa.s3-sa-east-1.amazonaws.com/Update.png',
-      'A book!',
+      'A Pillow',
+      'https://www.maxpixel.net/static/photo/2x/Soft-Pillow-Green-Decoration-Deco-Snuggle-1241878.jpg',
+      'A soft pillow!',
       19.99
     ),
     new Product(
-      'A Glass',
-      'https://mypicturemusic.s3-sa-east-1.amazonaws.com/Find.png',
-      'A Glass',
+      'A Carpet',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Ardabil_Carpet.jpg/397px-Ardabil_Carpet.jpg',
+      'A carpet which you might like - or not.',
       89.99
     )
   ];
@@ -81,7 +80,6 @@ class ProductList {
   constructor() {}
 
   render() {
-    
     const prodList = document.createElement('ul');
     prodList.className = 'product-list';
     for (const prod of this.products) {
@@ -89,9 +87,7 @@ class ProductList {
       const prodEl = productItem.render();
       prodList.append(prodEl);
     }
-    //renderHook.append(prodList); render was moved to Shop
     return prodList;
-    
   }
 }
 
